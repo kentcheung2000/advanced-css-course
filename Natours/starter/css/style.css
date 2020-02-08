@@ -115,7 +115,8 @@ body {
 .row {
   max-width: 114rem;
   background-color: #eee;
-  margin: 0 auto; }
+  margin: 0 auto;
+  /* <*, $> */ }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {
@@ -159,3 +160,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
