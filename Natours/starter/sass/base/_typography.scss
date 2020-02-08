@@ -5,11 +5,9 @@ body {
   line-height: 1.7;
   color: $color-grey-dark;
   padding: 3rem;
-
-  box-sizing: border-box;
 }
 
-heading-primary {
+.heading-primary {
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
