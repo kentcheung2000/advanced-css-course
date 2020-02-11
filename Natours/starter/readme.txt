@@ -23,3 +23,11 @@ produce
   <img src="" alt="" class="composition__photo composition__photo--p1">
   <img src="" alt="" class="composition__photo composition__photo--p1">
 </div>
+
+.row>.col-1-of-4>.feature-box
+produce
+<div class="row">
+  <div class="col-1-of-4">
+    <div class="feature-box"></div>
+  </div>
+</div>
