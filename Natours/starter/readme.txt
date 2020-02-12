@@ -31,3 +31,13 @@ produce
     <div class="feature-box"></div>
   </div>
 </div>
+
+ul>li*3
+produce
+<ul>
+  <li>3 day tours</li>
+  <li>Up to 30 people</li>
+  <li>2 tour guides</li>
+  <li>Sleep in cozy hotels</li>
+  <li>Difficult: easy</li>
+</ul>
