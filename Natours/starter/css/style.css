@@ -1,3 +1,17 @@
+/*
+0 - 600 Phone
+600 - 900 Tablet portrait
+600 - 1200 Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big destop
+*/
+/*
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,6 +49,12 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
