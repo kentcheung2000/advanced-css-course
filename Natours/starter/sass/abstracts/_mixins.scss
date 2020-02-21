@@ -22,12 +22,6 @@
 1800px + : Big destop
 */
 
-@mixin respond-phone {
-  @media (max-width: 600px) {
-    @content;
-  }
-}
-
 /*
 $breakpoint arguement choices:
 - phone
