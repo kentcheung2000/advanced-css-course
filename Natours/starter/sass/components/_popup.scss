@@ -8,8 +8,15 @@
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
 
+  /* How do we implement this functionality in safari and leave it the way it was in google chrome */
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba($color-black, 0.3);
+  }
 
   &__content {
     @include absCenter;
@@ -21,8 +28,8 @@
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(.25);
-    transition: all .4s .2s;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all 0.4s 0.2s;
   }
 
   &__left {
@@ -82,13 +89,12 @@
       font-size: 3rem;
       text-decoration: none;
       display: inline-block;
-      transition: all .2s;
+      transition: all 0.2s;
       line-height: 1;
     }
 
-    &:hover{
+    &:hover {
       color: $color-primary;
     }
-
   }
 }
