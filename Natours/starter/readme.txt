@@ -41,3 +41,79 @@ produce
   <li>Sleep in cozy hotels</li>
   <li>Difficult: easy</li>
 </ul>
+
+
+Build sass
+1)
+Json file
+ "watch:sass": "node-sass sass/main.scss css/style.css -w",
+ "compile:sass": "node-sass sass/main.scss css/style.comp.css"
+
+2)
+npm run compile:sass
+
+3)
+npm install concat --save-dev
+
+4)
+concat -o output.css ./1.css ./2.css ./3.css
+
+5)
+"scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css" 
+},
+
+6)
+npm run concat:css
+
+7)
+npm install autoprefixer --save-dev
+
+8)
+npm install postcss-cli --save-dev
+
+9)
+"scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css"
+},
+
+10)
+npm run prefix:css
+
+11)
+"scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+},
+
+12)
+npm run compress:css
+
+13)
+npm install npm-run-all --save-dev
+
+14)
+npm run build:css
+
+15)
+"scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+},
+
+16)
+npm run start
