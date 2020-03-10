@@ -20,13 +20,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  /* error
-  display: grid;
   grid-template-rows: 80vh min-content 40vh repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  */ }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-rows: 6rem 80vh min-content 40vh repeat(3, min-content);
@@ -228,7 +223,7 @@ body {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-row-gap: 1.5rem;
-  grid-column-gap: 2.5rem; }
+  grid-row-gap: 2.5rem; }
   @supports (display: grid) {
     .feature {
       width: auto;
@@ -237,10 +232,9 @@ body {
     fill: #c69963;
     width: 4.5rem;
     height: 4.5rem;
-    grid-row: 1 / span 2;
-    transform: translateY(-1rem); }
+    grid-row: 1 / span 2; }
   .feature__text {
-    font-size: 1.7rem; }
+    font-size: 1rem; }
 
 .story__pictures {
   background-color: #c69963;
