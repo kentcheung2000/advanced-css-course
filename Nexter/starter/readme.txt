@@ -10,3 +10,7 @@
 
 li.nav__item>a.nav__link
 <li class="nav__item"><a href="" class="nav__link"></a></li>
+
+
+
+npm run build:css
